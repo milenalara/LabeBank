@@ -7,7 +7,7 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors());
 
-// busca as contas
+// buscar todas as contas
 app.get("/account", (req: Request, res: Response) => {
 	let errorCode = 400;
 	try {
@@ -22,7 +22,7 @@ app.get("/account", (req: Request, res: Response) => {
 	}
 })
 
-// consulta o saldo da conta
+// consultar o saldo da conta
 app.get("/balance", (req: Request, res: Response) => {
 	let errorCode = 400;
 	try {
@@ -45,7 +45,7 @@ app.get("/balance", (req: Request, res: Response) => {
 	}
 })
 
-// cria conta
+// criar conta
 app.post("/account", (req: Request, res: Response) => {
 	let errorCode = 400;
 	try {
